@@ -1,0 +1,29 @@
+
+from collections import Counter
+
+def findAddedCharacter(s, t):
+    b=Counter(s)
+    c=Counter(t)
+    for i in t:
+        if i not in s:
+            a=i
+        elif c[i]!=b[i]:
+            a=i
+    return a
+        
+    
+
+            
+               
+              
+            
+
+                
+    
+
+# Main.
+test = int(input())
+for x in range(test):
+	s = input()
+	t = input()
+	print(findAddedCharacter(s, t))
