@@ -1,0 +1,7 @@
+from typing import List
+
+def makeBothEqual(n: int, m: int, s: str, t: str) -> int:
+    if t in s:
+        return 1
+    else:
+        return 0
