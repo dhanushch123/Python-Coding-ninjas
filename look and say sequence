@@ -1,0 +1,25 @@
+def lookAndSequence(n):
+    if n==1:
+        return "1"
+    elif n==2:
+        return "11"
+    elif n>=3:
+        s="11"
+        for i in range(3,n+1):
+            prev_num=s[0]
+            new_seq=""
+            count=1
+            for j in range(1,len(s)):
+                if s[j]==prev_num:
+                    count+=1
+                else:
+                    new_seq+=str(count)+prev_num
+                    prev_num=s[j]
+                    count=1
+            new_seq+=str(count)+prev_num
+            s=new_seq
+        return s
+t=int(input())
+for k in range(t):
+    n=int(input())
+    print(lookAndSequence(n)) 
